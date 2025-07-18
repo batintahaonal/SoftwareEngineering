@@ -1,0 +1,30 @@
+﻿@model library.Data.Book
+<h1>Book List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th style="width:150px">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in ViewBag.Books)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.Genre</td>
+                <td class="d-flex gap-2 ">
+
+                    <a asp-controller="Ad" asp-action="Edit" asp-route-id="@book.BookId" class="btn btn-secondary">Edit</a>
+                    <form method="post" action="/Ad/DeleteBook" style="margin: 0;">
+                        <input type="hidden" name="id" value="@book.BookId" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
