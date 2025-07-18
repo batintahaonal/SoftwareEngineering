@@ -1,0 +1,1 @@
+libraryleri birleştirip upper-library dosyası oluşturup diğer upper-libraryler ile birleştirin. Bu birleştirdiğiniz upper-libraryleri project dosyalarının yanına ekleyip onları da birleştirin böylece projeyi tek bir parça olarak elde edeceksiniz
